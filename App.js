@@ -9,7 +9,7 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import AddEntry from './components/AddEntry';
-import History from './components/History';
+import HistoryStack from './components/HistoryStack';
 
 import { white, purple } from './utils/colors';
 import { FontAwesome, Ionicons } from '@expo/vector-icons';
@@ -28,15 +28,15 @@ export default function App() {
           <Tabs.Navigator
             initialRouteName="AddEntry"
             screenOptions={({ route }) => ({
-              tabBarIcon: ({ color }) => {
+              tabBarIcon: () => {
                 let icon;
-                if (route.name === 'Add Entry') {
+                if (route.name === 'AddEntry') {
                   icon = (
-                    <FontAwesome name="plus-square" size={30} color={color} />
+                    <FontAwesome name="plus-square" size={30} color={white} />
                   );
-                } else if (route.name === 'Add Entry') {
+                } else if (route.name === 'History') {
                   icon = (
-                    <FontAwesome name="ios-bookmarks" size={30} color={color} />
+                    <FontAwesome name="ios-bookmarks" size={30} color={white} />
                   );
                 }
                 return icon;
@@ -57,7 +57,7 @@ export default function App() {
               },
             }}
           >
-            <Tabs.Screen name="History" component={History} />
+            <Tabs.Screen name="History" component={HistoryStack} />
             <Tabs.Screen name="AddEntry" component={AddEntry} />
           </Tabs.Navigator>
         </NavigationContainer>
