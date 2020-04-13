@@ -73,7 +73,7 @@ export function getMetricMetaInfo(metric) {
       type: 'steppers',
       getIcon() {
         return (
-          <View style={([styles.iconContainer], { backgroundColor: red })}>
+          <View style={[styles.iconContainer, { backgroundColor: red }]}>
             <MaterialIcons name="directions-run" color={'white'} size={35} />
           </View>
         );
@@ -87,7 +87,7 @@ export function getMetricMetaInfo(metric) {
       type: 'steppers',
       getIcon() {
         return (
-          <View style={([styles.iconContainer], { backgroundColor: orange })}>
+          <View style={[styles.iconContainer, { backgroundColor: orange }]}>
             <MaterialCommunityIcons name="bike" color={'white'} size={35} />
           </View>
         );
@@ -101,8 +101,8 @@ export function getMetricMetaInfo(metric) {
       type: 'steppers',
       getIcon() {
         return (
-          <View style={([styles.iconContainer], { backgroundColor: blue })}>
-            <MaterialIcons name="swim" color={'white'} size={35} />
+          <View style={[styles.iconContainer, { backgroundColor: blue }]}>
+            <MaterialIcons name="pool" color={'white'} size={35} />
           </View>
         );
       },
@@ -115,9 +115,7 @@ export function getMetricMetaInfo(metric) {
       type: 'slider',
       getIcon() {
         return (
-          <View
-            style={([styles.iconContainer], { backgroundColor: lightPurp })}
-          >
+          <View style={[styles.iconContainer, { backgroundColor: lightPurp }]}>
             <FontAwesome name="bed" color={'white'} size={35} />
           </View>
         );
@@ -131,7 +129,7 @@ export function getMetricMetaInfo(metric) {
       type: 'slider',
       getIcon() {
         return (
-          <View style={([styles.iconContainer], { backgroundColor: pink })}>
+          <View style={[styles.iconContainer, { backgroundColor: pink }]}>
             <MaterialCommunityIcons name="food" color={'white'} size={35} />
           </View>
         );

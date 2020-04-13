@@ -6,7 +6,7 @@ import {
   StyleSheet,
   Platform,
 } from 'react-native';
-import { white, purple } from '../utils/colors';
+import { white, purple, gray } from '../utils/colors';
 import { FontAwesome, Entypo } from '@expo/vector-icons';
 
 export default function UdaciSteppers({
@@ -18,7 +18,7 @@ export default function UdaciSteppers({
   onDecrement,
 }) {
   return (
-    <View style={([styles.row], { justifyContent: 'space-between' })}>
+    <View style={[styles.row, { justifyContent: 'space-between' }]}>
       {Platform.os === 'ios' ? (
         <View style={{ flexDirection: 'row' }}>
           <TouchableOpacity

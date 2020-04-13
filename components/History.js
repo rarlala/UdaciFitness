@@ -37,7 +37,7 @@ class History extends Component {
       );
   }
 
-  renderItem = ({ today, ...metric }, formattedDate, key) => (
+  renderItem = ({ today, ...metrics }, formattedDate, key) => (
     <View style={styles.item}>
       {today ? (
         <View>

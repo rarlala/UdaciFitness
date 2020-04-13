@@ -15,18 +15,19 @@ export default function MetricCard({ date, metrics }) {
           unit,
           backgroundColor,
         } = getMetricMetaInfo(metric);
+
+        return (
+          <View style={styles.metric} key={metrics}>
+            {getIcon()}
+            <View>
+              <Text style={{ fontSize: 20 }}>{displayName}</Text>
+              <Text style={{ fontSize: 16, color: gray }}>
+                {metrics[metric]} {unit}
+              </Text>
+            </View>
+          </View>
+        );
       })}
-      return(
-      <View style={StyleSheet.metric} key={metric}>
-        {getIcon()}
-        <View>
-          <Text style={{ fontSize: 20 }}>{displayName}</Text>
-          <Text style={{ fontSize: 16, color: gray }}>
-            {metrics[metric]} {unit}
-          </Text>
-        </View>
-      </View>
-      )
     </View>
   );
 }
