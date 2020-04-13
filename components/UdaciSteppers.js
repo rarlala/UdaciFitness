@@ -6,6 +6,7 @@ import {
   StyleSheet,
   Platform,
 } from 'react-native';
+import { white, purple } from '../utils/colors';
 import { FontAwesome, Entypo } from '@expo/vector-icons';
 
 export default function UdaciSteppers({

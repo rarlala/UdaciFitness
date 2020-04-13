@@ -187,7 +187,7 @@ const styles = StyleSheet.create({
     backgroundColor: purple,
     padding: 10,
     paddingLeft: 30,
-    paddingRight30,
+    paddingRight: 30,
     height: 45,
     borderRadius: 2,
     alignSelf: 'flex-end',
