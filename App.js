@@ -10,6 +10,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import AddEntry from './components/AddEntry';
 import HistoryStack from './components/HistoryStack';
+import Live from './components/Live';
 
 import { white, purple } from './utils/colors';
 import { FontAwesome, Ionicons } from '@expo/vector-icons';
@@ -38,6 +39,14 @@ export default function App() {
                   icon = (
                     <FontAwesome name="ios-bookmarks" size={30} color={white} />
                   );
+                } else if (route.name === 'Live') {
+                  icon = (
+                    <FontAwesome
+                      name="ios-speedometer"
+                      size={30}
+                      color={white}
+                    />
+                  );
                 }
                 return icon;
               },
@@ -59,6 +68,7 @@ export default function App() {
           >
             <Tabs.Screen name="History" component={HistoryStack} />
             <Tabs.Screen name="AddEntry" component={AddEntry} />
+            <Tabs.Screen name="Live" component={Live} />
           </Tabs.Navigator>
         </NavigationContainer>
       </View>
